@@ -6,17 +6,14 @@ Use this command to change to your VirtualBox installation directory.
 
 cd "C:\Program Files\Oracle\VirtualBox\"
 
-VBoxManage.exe modifyvm "mcOS" --cpuidset 00000001 000106e5 00100800 0098e3fd bfebfbff
+VBoxManage.exe modifyvm "name VM" --cpuidset 00000001 000106e5 00100800 0098e3fd bfebfbff
+VBoxManage setextradata "name VM" "VBoxInternal/Devices/efi/0/Config/DmiSystemProduct" "iMac19,1"
+VBoxManage setextradata "name VM" "VBoxInternal/Devices/efi/0/Config/DmiSystemVersion" "1.0"
+VBoxManage setextradata "name VM" "VBoxInternal/Devices/efi/0/Config/DmiBoardProduct" "Mac-AA95B1DDAB278B95"
+VBoxManage setextradata "name VM" "VBoxInternal/Devices/smc/0/Config/DeviceKey" "ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc"
+VBoxManage setextradata "name VM" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 1
 
-VBoxManage setextradata "mcOS" "VBoxInternal/Devices/efi/0/Config/DmiSystemProduct" "iMac19,1"
+VBoxManage.exe setextradata “name VM” “VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC” 0
 
-VBoxManage setextradata "mcOS" "VBoxInternal/Devices/efi/0/Config/DmiSystemVersion" "1.0"
-
-VBoxManage setextradata "mcOS" "VBoxInternal/Devices/efi/0/Config/DmiBoardProduct" "Mac-AA95B1DDAB278B95"
-
-VBoxManage setextradata "mcOS" "VBoxInternal/Devices/smc/0/Config/DeviceKey" "ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc"
-
-VBoxManage setextradata "mcOS" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 1
-
-VBoxManage setextradata "mcOS" VBoxInternal2/EfiGraphicsResolution 1920x1080
+enable USB 3.0
 
